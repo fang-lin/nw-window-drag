@@ -1,0 +1,1 @@
+7z a app.zip *

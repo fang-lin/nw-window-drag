@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: #cccccc;
+        }
+        body.dragging {
+            cursor: pointer !important;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+        }
+    </style>
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <title>nw-test</title>
+</head>
+<body>
+<!--<button id="pop-window">Pop Window</button>-->
+<script>
+    function dragging(event) {
+        window.moveTo(event.screenX - event.data.x, event.screenY - event.data.y);
+    }
+    $(document).mousedown(function (event) {
+        $('body').addClass('dragging');
+        var xy = {
+            x: event.screenX - window.screenLeft,
+            y: event.screenY - window.screenTop
+        };
+        console.log('mousedown');
+        $(document).on('mousemove.dragging', xy, dragging);
+    });
+
+    $(document).mouseup(function () {
+        $('body').removeClass('dragging');
+        $(document).off('.dragging');
+    });
+</script>
+</body>
+</html>

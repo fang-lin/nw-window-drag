@@ -1,0 +1,19 @@
+{
+  "name": "nw-window-drag",
+  "version": "0.1.0",
+  "authors": [
+    "Justin Fang"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
+}

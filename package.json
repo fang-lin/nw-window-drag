@@ -1,0 +1,24 @@
+{
+    "name": "nw-window-drag",
+    "version": "0.1.0",
+    "description": "",
+    "keywords": ["demo", "node-webkit"],
+    "main": "index.html",
+    "window": {
+        "toolbar": false,
+        "frame": false,
+        "icon": "link.png",
+        "width": 320,
+        "height": 640,
+        "show_in_taskbar": true
+    },
+    "webkit": {
+        "plugin": false
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Justin Fang",
+    "license": "MIT"
+
+}
